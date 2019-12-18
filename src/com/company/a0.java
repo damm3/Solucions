@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.UUID;
 
-public class a1 {
+public class a0 {
 
     public static void main(String[] args) {
         String uid;

@@ -19,20 +19,25 @@ public class fa08c {
         float bxm = s.nextFloat();
         float bym = s.nextFloat();
 
+        float baseFoto = axf-bxf;
+        float alturaFoto = ayf-byf;
+
+        float baseMarc = axm-bxm;
+        float alturaMarc = aym-bym;
+
         System.out.println(
-            (
+
                 // tamany
-                (axf-bxf <= axm-bxm && ayf-byf <= aym-bym)
-                ||
-                (axf-bxf <= aym-bym && ayf-byf <= axm-bxm)
-            )
-            &&
-            (
-                // proporcio
-                (axf-bxf)/(ayf-byf) == (axm-bxm)/(aym-bym)
-                ||
-                (axf-bxf)/(ayf-byf) == (aym-bym)/(axm-bxm)
-            )
+                baseFoto*alturaFoto <= baseMarc*alturaMarc
+
+                &&
+
+                //proporció
+                (
+                    baseFoto/alturaFoto == baseMarc/alturaMarc
+                    ||
+                    baseFoto/alturaFoto == alturaMarc/baseMarc
+                )
         );
     }
 }
