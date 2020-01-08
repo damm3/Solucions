@@ -11,13 +11,13 @@ public class a4035 {
 
         int[] numeros = new int[n];
 
-        for(int i=0; i<n; i++){
+        for (int i = 0; i < n; i++){
             numeros[i] = scanner.nextInt();
         }
 
         int iguals = 0;
-        for(int i=0; i<n-1; i++){
-            if(numeros[i] == numeros[n-1]){
+        for (int i = 0; i < n-1; i++){
+            if (numeros[i] == numeros[n-1]){
                 iguals++;
             }
         }
