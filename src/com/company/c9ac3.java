@@ -8,7 +8,7 @@ public class c9ac3 {
         Los algoritmos de ordenacion mas estudiados suelen ser:
             * Bubblesort
             * Mergesort
-            * Quiksort
+            * Quicksort
 
             Para este ejercicio implementamos el Bubblesort, ya que es
             el mas sencillo de los tres.
