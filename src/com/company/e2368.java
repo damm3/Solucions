@@ -35,7 +35,7 @@ public class e2368 {
 
             // si trobem en la sequencia2
             // el primer numero de la sequencia1
-            if(seq2[i] == seq1[0]){
+            if (seq2[i] == seq1[0]) {
 
                 // la variable "i" ens marca la posicio de la sequencia2
                 // on hem trobat el primer numero de la sequencia2
@@ -44,7 +44,7 @@ public class e2368 {
                 // (a partir de la posicio on hem trobat el primer numero)
                 // son menys que els que hi ha a la sequencia1
                 // no pot estar dintre
-                if(n1 > n2-i){
+                if (n1 > n2 - i) {
                     System.out.println("NO");
                     return;
                 }
@@ -55,12 +55,12 @@ public class e2368 {
                 boolean esTrobaDintre = true;
 
                 for (int j = 1; j < n1; j++) {
-                    if(seq2[i+j] != seq1[j]){
+                    if (seq2[i + j] != seq1[j]) {
                         esTrobaDintre = false;
                     }
                 }
 
-                if(esTrobaDintre){
+                if (esTrobaDintre) {
                     System.out.println("SI");
                     return;
                 }
