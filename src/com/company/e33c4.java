@@ -3,7 +3,6 @@ package com.company;
 import java.util.Scanner;
 
 public class e33c4 {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
