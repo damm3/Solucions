@@ -106,8 +106,5 @@ public class aac7e {
                 System.out.println(param1 + "," + param2 + "," + param3 + " -> " + returnValue);
             }
         }
-
-
-        System.out.println();
     }
 }
