@@ -29,7 +29,7 @@ public class b7df8 {
         System.out.println();
         System.out.println();
 
-        // imprimim els que tenen un valor parell
+        // imprimim els que tenen un lletra parell
         for(int i=0; i<n; i++){
             if(seq[i]%2 == 0){
                 System.out.print(seq[i] + " ");
@@ -38,7 +38,7 @@ public class b7df8 {
 
         System.out.println();
 
-        // imprimim els que tenen un valor imparell
+        // imprimim els que tenen un lletra imparell
         for (int i=0; i<n; i++){
             if(seq[i]%2 == 1){
                 System.out.print(seq[i] + " ");

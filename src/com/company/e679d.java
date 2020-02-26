@@ -1,30 +1,31 @@
 package com.company;
 
-import java.util.Scanner;
+class Level {
+    int value;
+    int max;
+}
 
+class Enemy {
+    Level health;
+    Level weapon;
 
-class Date {
-    int day, month, year;
+    Enemy(String type){
+        health = new Level();
+        weapon = new Level();
 
-    public Date(int day, int month, int year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-
-        if(month > 12){
-            month = 12;
-        } else if(month < 1){
-            month = 1;
-        }
-
-        if(day < 1){
-            day = 1;
-        } else if(day > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)){
-            day = 31;
-        } else if(day > 30 && (month == 4 || month == 6 || month == 9 || month == 11)){
-            day = 30;
-        } else if(day > 28){
-            day = 28;
+        switch (type) {
+            case "guerrero":
+                health.max = health.value = 50;
+                weapon.max = weapon.value = 60;
+                break;
+            case "amazona":
+                health.max = health.value = 40;
+                weapon.max = weapon.value = 70;
+                break;
+            case "brujo":
+                health.max = health.value = 30;
+                weapon.max = weapon.value = 80;
+                break;
         }
     }
 }
@@ -32,10 +33,22 @@ class Date {
 public class e679d {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        Date date = new Date(22, 3, 2001);
+        Enemy guerrero = new Enemy("guerrero");
+        Enemy amazona = new Enemy("amazona");
+        Enemy brujo = new Enemy("brujo");
 
-        System.out.println();
+        System.out.println("GUERRERO  " +
+                "Health: " + guerrero.health.value + "/" + guerrero.health.max + "   " +
+                "Weapon: " + guerrero.weapon.value + "/" + guerrero.weapon.max);
+
+        System.out.println("AMAZONA   " +
+                "Health: " + amazona.health.value + "/" + amazona.health.max + "   " +
+                "Weapon: " + amazona.weapon.value + "/" + amazona.weapon.max);
+
+        System.out.println("BRUJO     " +
+                "Health: " + brujo.health.value + "/" + brujo.health.max + "   " +
+                "Weapon: " + brujo.weapon.value + "/" + brujo.weapon.max);
+
     }
 }
