@@ -23,11 +23,12 @@ public class d52a3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
 
         Thermometer thermometer1 = new Thermometer();
         Thermometer thermometer2 = new Thermometer();
 
-        float a, b;
+        float a;
         while((a = scanner.nextFloat()) >= -273.1f) {
             thermometer1.celsius = a;
             thermometer2.celsius = scanner.nextFloat();
