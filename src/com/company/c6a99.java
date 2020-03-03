@@ -7,7 +7,22 @@ public class c6a99 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // 68 comptadors, un per a cada cromo
+        int[] repes = new int[68];
 
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int id = scanner.nextInt();
+
+            repes[id-1]++;
+        }
+
+        for (int i = 0; i < 68; i++) {
+            if(repes[i] > 1){
+                System.out.println((i+1) + ": " + repes[i]);
+            }
+        }
     }
 }
 

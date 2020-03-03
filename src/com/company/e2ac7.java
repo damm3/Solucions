@@ -1,66 +1,58 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Locale;
 import java.util.Scanner;
 
-class Seguro implements Comparable<Seguro> {
+class Producto {
+    String descripcion;
     float precio;
-    boolean lunas;
-    boolean asistencia;
 
-    public Seguro(float precio, boolean lunas, boolean asistencia) {
+    Producto(String descripcion, float precio) {
+        this.descripcion = descripcion;
         this.precio = precio;
-        this.lunas = lunas;
-        this.asistencia = asistencia;
     }
 
-    @Override
     public String toString() {
-        return "Seguro{" +
-                "precio=" + precio +
-                ", lunas=" + lunas +
-                ", asistencia=" + asistencia +
+        return "Producto{" +
+                "descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
                 '}';
     }
+}
 
-    @Override
-    public int compareTo(Seguro otro) {
-        if(precio > otro.precio){
-            return -1;
-        }
-        if(precio < otro.precio){
-            return 1;
-        }
-//        if(lunas && lunas)
+class Descuento {
+    float valor;
 
-        return 0;
+    Descuento(float valor) {
+        this.valor = valor;
+    }
+
+    void aplicar(Producto producto) {
+        producto.precio -= valor/100*producto.precio;
     }
 }
 
-class Comparador {
-
-    Seguro[] comparar(Seguro[] seguros){
-        Arrays.sort(seguros);
-        return seguros;
-    }
-}
 public class e2ac7 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
 
-        Comparador comparador = new Comparador();
+        Producto producto = new Producto(scanner.next(), scanner.nextFloat());
 
-        Seguro[] comparacion = comparador.comparar(new Seguro[]{
-                new Seguro(345, true, true),
-                new Seguro(345, false, true),
-                new Seguro(345, true, false),
-                new Seguro(500, true, true)
-        });
+        System.out.println(producto);
 
-        System.out.println();
+        Descuento descuento = new Descuento(scanner.nextFloat());
+
+        descuento.aplicar(producto);
+
+        System.out.println(producto);
     }
 }
+
+/*
+producto1 10
+15
+
+
+ */
